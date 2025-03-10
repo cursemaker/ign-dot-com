@@ -12,20 +12,19 @@ import { HiOutlineGif } from "react-icons/hi2";
 import { TbCircleDashed } from "react-icons/tb";
 import IGN_Logo from "@/component/IGN_Logo.component";
 
-  export interface IArticle {
-    title: string;
-    subTitle: string;
-    contentText: string;
-    authorName: string;
-    thumbnail_imgUrl: string;
-    category: string;
-    created: number;
-    updated: number;
-    image: string;
-    tag: string;
-    objectId: string;
-
-  }
+export interface IArticle {
+  title: string;
+  subTitle: string;
+  contentText: string;
+  authorName: string;
+  thumbnail_imgUrl: string;
+  category: string;
+  created: number;
+  updated: number;
+  image: string;
+  tag: string;
+  objectId: string;
+}
 
 export default function ArticleDetailPage() {
   const params = useParams();
@@ -127,7 +126,7 @@ export default function ArticleDetailPage() {
         </section>
         <div className="border-b border-[#8a9399]/40 mt-[18px] w-full"></div>
       </div>
-      <div className="sm:relative grid grid-cols-[calc(100%_-_324px)_300px]">
+      <div className="sm:relative sm:grid sm:grid-cols-[calc(100%_-_324px)_300px]">
         <div>
           <div title="article-content" className="w-full h-max m-[0_auto] px-6">
             <div title="side-by-side" className="sm:max:flex flex-col">
@@ -288,7 +287,6 @@ export default function ArticleDetailPage() {
             </div>
           </div>
         </div>
-
         <div title="ign-recommend" className="mt-3 px-6 sm:sticky sm:right-0 sm:top-0">
           <h3
             title="ign-recommend-headline"
