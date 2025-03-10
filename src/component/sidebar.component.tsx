@@ -78,9 +78,9 @@ export default function Sidebar() {
       </div>
       {/* Menu */}
       <div className="overflow-y-auto">
-        <div className="p-[18px_24px] flex flex-col gap-y-4">
+        <div className="p-[18px_24px] flex flex-col gap-y-4 scroll-smooth">
           {/* upgrade to plus */}
-          <div className="p-6 mb-6 border-2 rounded-lg border-white *:text-center flex flex-col justify-center leading-[1.5]">
+          <div id="top-sidebar" className="p-6 mb-6 border-2 rounded-lg border-white *:text-center flex flex-col justify-center leading-[1.5]">
             <div className="text-[15px] leading-[1.5] max-h-[2rem] font-bold text-ellipsis overflow-hidden flex items-center justify-center">
               {"Upgrade to "}
               <svg
@@ -164,9 +164,9 @@ export default function Sidebar() {
             </a>
           </div>
           {/* back to top */}
-          <div>
+          <Link href="#top-sidebar">
             <button className="btn btn-outline w-full p-[6px_12px]">Back To Top</button>
-          </div>
+          </Link>
         </div>
       </div>
       {/* Join or Sign Button */}
