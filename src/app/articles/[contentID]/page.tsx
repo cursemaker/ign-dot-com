@@ -304,7 +304,9 @@ export default function ArticleDetailPage() {
                   index === 0 ? "pb-[18px]" : "py-[18px]"
                 } max-sm:border-b max-sm:border-[rgba(138, 147, 153, 0.25)]`}
                 key={index}>
-                <Link href="" className="max-sm:grid max-sm:grid-cols-[1.2fr_2fr] flex flex-col gap-x-3 items-center">
+                <Link
+                  href={`/articles/${item.objectId}`}
+                  className="max-sm:grid max-sm:grid-cols-[1.2fr_2fr] flex flex-col gap-x-3 items-center">
                   <div title="item-thumbnail" className="w-full aspect-video relative">
                     <Image
                       src={item.thumbnail_imgUrl}
