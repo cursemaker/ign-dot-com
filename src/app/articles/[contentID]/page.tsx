@@ -287,7 +287,7 @@ export default function ArticleDetailPage() {
             </div>
           </div>
         </div>
-        <div title="ign-recommend" className="mt-3 px-6 sm:sticky sm:right-0 sm:top-0">
+        <div title="ign-recommend" className="mt-3 px-6 sm:sticky sm:right-0 sm:top-0 sm:max-h-[100vh] sm:overflow-y-auto">
           <h3
             title="ign-recommend-headline"
             className="mb-[18px] text-center text-[18px] text-[#f6f8f7] font-black leading-[1.25] tracking-[-0.01em]">
