@@ -71,7 +71,7 @@ export default function ArticleDetailPage() {
   }
 
   return (
-    <main className="max-w-full sm:mx-[120px] flex flex-col justify-center">
+    <main className="max-w-full sm:mx-[120px] max-sm:mt-20 flex flex-col justify-center">
       <div title="commerce-disclosure"></div>
       <div title="adsunit-wrapper"></div>
       <div title="page-header"></div>
