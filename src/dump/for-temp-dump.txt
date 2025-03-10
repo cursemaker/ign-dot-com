@@ -1,0 +1,93 @@
+ {/* test carousel homepage header */}
+      <div className="carousel carousel-center rounded-box max-w-full gap-6 px-6 md:px-0 my-[18px]">
+        {headerContent.map((content: any, index: number) => (
+          <article className="" key={index}>
+            <Link href={`/articles/${content.objectId}`}>
+              <figure className="rounded w-full h-full relative overflow-hidden">
+                <Image
+                  src={content.thumbnail_imgUrl}
+                  alt="thumbnail-img"
+                  width={204}
+                  height={340}
+                  className="min-w-[204px]"
+                />
+                <div className="absolute bottom-0 w-full min-h-max box-border">
+                  <div className="p-3 w-full h-full top-0 block box-border relative">
+                    <div
+                      className={`absolute w-full h-full inset-0 ${
+                        index === 2 ? "bg-[#38827F]/75" : index === 3 ? "bg-[#9B59B6]/75" : "bg-[#68000d]/75"
+                      } opacity 0.25s ease-in`}></div>
+                    <figcaption className="font-black text-wrap text-[18px] text-white relative">
+                      {content.title}
+                    </figcaption>
+                  </div>
+                </div>
+              </figure>
+            </Link>
+          </article>
+        ))}
+      </div>
+
+      {/* test carousel homepage header */}
+      <div className="carousel carousel-center rounded-box w-full gap-6 px-6 md:px-0 my-[18px]">
+        {headerContent.map((content: any, index: number) => (
+          <article className="" key={index}>
+            <Link href={`/articles/${content.objectId}`}>
+              <figure className="rounded aspect-[204/340] w-[clamp(204px,calc(204px+((100vw-1024px)*0.0625)),240px)] relative overflow-hidden">
+                <Image
+                  src={content.thumbnail_imgUrl}
+                  alt="thumbnail-img"
+                  layout="responsive"
+                  width={204}
+                  height={340}
+                  objectFit="cover"
+                  // className="min-w-[204px]"
+                />
+                <div className="absolute bottom-0 w-full min-h-max box-border">
+                  <div className="p-3 w-full h-full top-0 block box-border relative">
+                    <div
+                      className={`absolute w-full h-full inset-0 ${
+                        index === 2 ? "bg-[#38827F]/75" : index === 3 ? "bg-[#9B59B6]/75" : "bg-[#68000d]/75"
+                      } opacity 0.25s ease-in`}></div>
+                    <figcaption className="font-black text-wrap text-[18px] text-white relative">
+                      {content.title}
+                    </figcaption>
+                  </div>
+                </div>
+              </figure>
+            </Link>
+          </article>
+        ))}
+      </div>
+      {/* text today stories */}
+
+       <a href="http://" className="rounded-tl-[80px] rounded-bl-[80px]">
+                <div>Latest</div>
+              </a>
+              <a href="http://">
+                <div>Videos</div>
+              </a>
+              <a href="http://">
+                <div>Games</div>
+              </a>
+              <a href="http://">
+                <div>Movies</div>
+              </a>
+              <a href="http://">
+                <div>TV</div>
+              </a>
+              <a href="http://">
+                <div>PlayStation</div>
+              </a>
+              <a href="http://">
+                <div>Xbox</div>
+              </a>
+              <a href="http://">
+                <div>Nintendo</div>
+              </a>
+              <a href="http://">
+                <div>PC</div>
+              </a>
+              <a href="http://" className="rounded-tr-[80px] rounded-br-[80px]">
+                <div>Tech</div>
+              </a>

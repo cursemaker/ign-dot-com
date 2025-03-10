@@ -1,0 +1,72 @@
+{/* homepage Header */}
+      <section title="homepage-header" className="my-[18px] w-full">
+        <div title="page-content" className="px-6 xl:px-[120px] w-full">
+          <div title="deck-items-container" className="overflow-x-auto scroll-smooth snap-x snap-mandatory max-w-full">
+            <div
+              title="deck-items"
+              className="grid grid-cols-4 gap-x-6 max-w-max whitespace-nowrap *:w-full *:h-[340px] *:snap-start">
+              {headerContent.map((content: any, index: number) => (
+                <article className="" key={index}>
+                  <Link href={`/articles/${content.objectId}`}>
+                    <figure className="rounded w-full h-full relative overflow-hidden">
+                      <Image
+                        src={content.thumbnail_imgUrl}
+                        alt="thumbnail-img"
+                        width={204}
+                        height={340}
+                        className="min-w-[204px]"
+                      />
+                      <div className="absolute bottom-0 w-full min-h-max box-border">
+                        <div className="p-3 w-full h-full top-0 block box-border relative">
+                          <div
+                            className={`absolute w-full h-full inset-0 ${
+                              index === 2 ? "bg-[#38827F]/75" : index === 3 ? "bg-[#9B59B6]/75" : "bg-[#68000d]/75"
+                            } opacity 0.25s ease-in`}></div>
+                          <figcaption className="font-black text-wrap text-[18px] text-white relative">
+                            {content.title}
+                          </figcaption>
+                        </div>
+                      </div>
+                    </figure>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* today top stories */}
+      <section title="today-top-stories" className="my-[18px] max-w-[1440px]">
+        <div title="page-content" className="px-6 xl:px-[120px] max-w-full flex flex-col gap-y-6">
+          <div title="title-bar" className="flex justify-start max-sm:text-[1.875rem] font-extrabold">
+            <h2>Today's Top Stories</h2>
+          </div>
+          <section title="carousel-section">
+            <div title="carousel-wrapper" className="overflow-x-auto scroll-smooth snap-x snap-mandatory max-w-full">
+              <div title="carousel" className="grid grid-cols-4 gap-x-6 max-w-max max-h-full whitespace-nowrap">
+                {todayStory.map((story: any, index: number) => (
+                  <Link href={`/articles/${story.objectId}`} key={index}>
+                    <div className="grid grid-rows-[min-content_auto] grid-flow-row h-full gap-y-3">
+                      <div className="max-h-max">
+                        <span>
+                          <Image
+                            src={story.thumbnail_imgUrl}
+                            alt="thumbnail-img"
+                            width={282}
+                            height={159}
+                            className="rounded-md"
+                          />
+                        </span>
+                      </div>
+                      <div className="w-[282px] min-h-full text-[13px] font-bold flex flex-col">
+                        <span className="w-full whitespace-normal">{story.title}</span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
