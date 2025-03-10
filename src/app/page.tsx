@@ -16,7 +16,7 @@ export default function Home() {
 
   const fetchHeaderContent = async () => {
     try {
-      const responseHeaderContent = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/contents/get-header`);
+      const responseHeaderContent = await axios.get(`/api/contents/get-header`);
       setHeaderContent(responseHeaderContent.data);
     } catch (error) {
       console.error(error);
@@ -25,7 +25,7 @@ export default function Home() {
 
   const fetchTodayStory = async () => {
     try {
-      const responseTodayStory = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/contents/get-today`);
+      const responseTodayStory = await axios.get(`/api/contents/get-today`);
       setTodayStory(responseTodayStory.data);
     } catch (error) {
       console.error(error);
@@ -34,7 +34,7 @@ export default function Home() {
 
   const fetchContentFeed = async () => {
     try {
-      const responseContentFeed = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/contents/get-content-feed`);
+      const responseContentFeed = await axios.get(`/api/contents/get-content-feed`);
       setContentFeed(responseContentFeed.data);
       setFilteredFeed(responseContentFeed.data);
     } catch (error) {

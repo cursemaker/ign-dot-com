@@ -34,7 +34,7 @@ export default function ArticleDetailPage() {
 
   const fetchArticle = async () => {
     try {
-      const responseArticle = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/article_detail/${params.contentID}`);
+      const responseArticle = await axios.get(`/api/article_detail/${params.contentID}`);
       console.log(responseArticle);
       setArticle(responseArticle.data);
     } catch (error) {
@@ -46,7 +46,7 @@ export default function ArticleDetailPage() {
 
   const fetchIGNRecommend = async () => {
     try {
-      const responseRecommends = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/contents/get-ign-recommend`);
+      const responseRecommends = await axios.get(`/api/contents/get-ign-recommend`);
       console.log(responseRecommends);
       setIGNRecommend(responseRecommends.data);
     } catch (error) {
