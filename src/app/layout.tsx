@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full dark">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-full`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-full bg-[202634]`}>
         <SidebarProvider>
           <HeaderBar />
           <div className="sm:grid sm:grid-cols-[300px_1fr] sm:h-screen sm:max-w-[1536px] overflow-x-hidden">
