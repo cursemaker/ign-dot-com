@@ -13,7 +13,6 @@ export async function GET(request: NextRequest) {
 
     const contentFeedData = await Backendless.Data.of("ign-content").find(queryBuilder);
 
-    console.log(contentFeedData);
     return Response.json(contentFeedData, { status: 200 });
   } catch (error) {
     console.error("Error:", error);

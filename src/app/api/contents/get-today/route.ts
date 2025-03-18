@@ -6,7 +6,6 @@ export async function GET() {
     queryBuilder.setWhereClause("category = 'today'");
     queryBuilder.setSortBy(["created ASC"]);
     const todayStoryData = await Backendless.Data.of("ign-content").find(queryBuilder);
-    console.log(todayStoryData);
     return Response.json(todayStoryData, { status: 200 });
   } catch (error) {
     console.error("Error:", error);
