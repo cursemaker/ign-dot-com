@@ -4,6 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 import { useSidebar } from "./sidebar.component";
 import IGN_Logo from "./IGN_Logo.component";
+import Link from "next/link";
 
 export default function HeaderBar() {
   const [prevScrollPos, setPrevScrollPos] = React.useState(0);
@@ -52,17 +53,18 @@ export default function HeaderBar() {
       <div className="flex justify-between w-full items-center">
         <div className="flex gap-x-4 items-center">
           <button
+            name="toggle-sidebar"
             className="h-[35px] w-[35px] flex items-center justify-center rounded-md border-2 border-[#6A6F77] hover:bg-slate-600 hover:border-white"
             onClick={toggleSidebar}>
             <IoIosArrowForward />
           </button>
-          <button className="h-[35px] bg-white text-black w-fit px-3 flex items-center font-bold text-sm rounded-md">
+          <button name="join-for-free" className="h-[35px] bg-white text-black w-fit px-3 flex items-center font-bold text-sm rounded-md">
             Join for Free
           </button>
         </div>
-        <div>
+        <Link aria-label="home" href="/" className="flex items-center">
           <IGN_Logo />
-        </div>
+        </Link>
       </div>
     </div>
   );

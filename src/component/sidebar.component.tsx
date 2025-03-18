@@ -66,15 +66,16 @@ export default function Sidebar() {
     <div className="relative z-[6000] sm:min-w-[300px] max-sm:max-w-[85vw] md:max-w-[300px] h-screen shrink-0 bg-[#283044] flex flex-col">
       {/* X Button */}
       <button
+        name="sidebar-closer"
         className="sm:hidden h-[35px] w-[35px] bg-[#202634]/60 absolute left-full -translate-x-1/2 top-0 translate-y-1/2 flex items-center justify-center rounded-md border-2 border-[#6A6F77] hover:bg-slate-600 hover:border-white"
         onClick={toggleSidebar}>
         <RxCross1 />
       </button>
       {/* Header */}
       <div className="p-[14px_24px_0px] h-16">
-        <div className="w-fit h-full flex justify-start items-center">
+        <Link href="/" aria-label="Home" className="w-fit h-full flex justify-start items-center">
           <IGN_Logo />
-        </div>
+        </Link>
       </div>
       {/* Menu */}
       <div className="overflow-y-auto">
