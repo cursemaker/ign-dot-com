@@ -4,7 +4,7 @@ import * as React from 'react';
 
 export default function IGN_Logo() {
       return (
-        <Link href="" className="block leading-[1]">
+        <Link aria-label='IGN' href="/" className="block leading-[1]">
           <svg className="*:text-white aspect-[76/24] w-[3.17em] text-[1.7em] shrink-0">
             <path
               fill="currentColor"
