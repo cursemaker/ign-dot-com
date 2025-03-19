@@ -117,11 +117,11 @@ export default function Sidebar() {
           </div>
           {/* scroll menu */}
           <div className='flex flex-col *:text-[#D3DDD9] *:text-[15px] *:p-2 *:flex *:gap-x-3 *:items-center *:h-12 [&>Link>*]:text-[32px] md:[&>Link>*]:text-[20px]'>
-            <Link href='/' className='hover:font-bold hover:bg-[#414959] hover:rounded-md'>
+            <Link href='/' aria-label='Home' className='hover:font-bold hover:bg-[#414959] hover:rounded-md'>
               <GoHomeFill />
               Home
             </Link>
-            <Link href='/about-us' className='hover:font-bold hover:bg-[#414959] hover:rounded-md'>
+            <Link href='/about-us' aria-label="About Us" className='hover:font-bold hover:bg-[#414959] hover:rounded-md'>
               <CiSquareInfo />
               About Us
             </Link>
@@ -168,13 +168,13 @@ export default function Sidebar() {
           </div>
           {/* back to top */}
           <Link href='#top-sidebar'>
-            <button className='btn btn-outline w-full p-[6px_12px]'>Back To Top</button>
+            <button aria-label="Back To Top" className='btn btn-outline w-full p-[6px_12px]'>Back To Top</button>
           </Link>
         </div>
       </div>
       {/* Join or Sign Button */}
       <div className='p-[18px_24px] border-t-2 border-white flex justify-center'>
-        <button className='btn w-full py-[6px] h-fit bg-white text-black border-[#e5e5e5]'>
+        <button aria-label="Join For Free or Log In" className='btn w-full py-[6px] h-fit bg-white text-black border-[#e5e5e5]'>
           Join For Free or Log In
         </button>
       </div>
